@@ -27,4 +27,4 @@ jobs:
       # Installe les dépendances du projet
       - run: mvn dependency:go-offline
       # Exécute les tests unitaires
-      - run: mvn test
+      - run: mvn clean test
