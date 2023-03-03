@@ -17,9 +17,14 @@
             <version>2.8.9</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.0</version>
+        </dependency>
     </dependencies>
 
-    <groupId>org.example</groupId>
+    <groupId>fr.univavignon.pokedex.api</groupId>
     <artifactId>ceri-m1-techniques-de-test-jerome-burgeat</artifactId>
     <version>1.0-SNAPSHOT</version>
 
