@@ -19,7 +19,7 @@ jobs:
   build_and_test:
     # Définit l'environnement pour le job
     docker:
-      - image: circleci/openjdk:18.0.1
+      - image: circleci/19.0.2
     # Définit les étapes à exécuter pour le job
     steps:
       # Récupère le code source depuis GitHub
