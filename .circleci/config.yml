@@ -28,7 +28,5 @@ jobs:
       - run: mvn dependency:go-offline
       # Exécute les tests unitaires
       - run: mvn clean test
-      - run:
-          name: Upload coverage reports to Codecov
-          command: |
-            bash <(curl -s https://codecov.io/bash) -t 1b514fa8-56b2-4830-94de-c79acc4e85a2
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3

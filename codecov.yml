@@ -1,0 +1,11 @@
+coverage:
+  status:
+    project:
+      default:
+        target: 50%
+
+comment:
+  layout: "diff, flags, files"
+
+flags:
+  build_and_test:
