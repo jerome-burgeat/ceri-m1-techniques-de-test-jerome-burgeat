@@ -3,9 +3,18 @@ coverage:
     project:
       default:
         target: 50%
+    patch:
+      build_and_test:
+        target: 41.67%
+        threshold: 0.01%
+        flags:
+          - build_and_test
 
 comment:
   layout: "diff, flags, files"
 
 flags:
   build_and_test:
+    carryforward: false
+    paths:
+      - src/
