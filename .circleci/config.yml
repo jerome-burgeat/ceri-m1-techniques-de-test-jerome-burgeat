@@ -28,3 +28,8 @@ jobs:
       - run: mvn dependency:go-offline
       # Exécute les tests unitaires
       - run: mvn clean test
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: 1b514fa8-56b2-4830-94de-c79acc4e85a2
