@@ -7,28 +7,33 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class IPokemonMetadataProviderTest {
 
-    IPokemonMetadataProvider iBulbizarreMetadataProvider;
-    IPokemonMetadataProvider iAqualiMetadataProvider;
+    IPokemonMetadataProvider iPokemonMetadataProvider;
     PokemonMetadata bulbizarre;
     PokemonMetadata aquali;
 
     @BeforeEach
     void initPokemon() {
         bulbizarre = new PokemonMetadata(0,"Bulbizarre", 126, 126, 90);
-        iBulbizarreMetadataProvider = index -> bulbizarre;
-
         aquali = new PokemonMetadata(133,"Aquali", 186, 168, 260);
-        iAqualiMetadataProvider = index -> aquali;
     }
 
     @Test
-    void getBulbizarreMetadata() throws PokedexException{
-        assertEquals(bulbizarre,iBulbizarreMetadataProvider.getPokemonMetadata(0));
+    void getPokemonMetadata() throws PokedexException{
+        iPokemonMetadataProvider = index -> bulbizarre;
+        assertEquals(bulbizarre,iPokemonMetadataProvider.getPokemonMetadata(0));
+        iPokemonMetadataProvider = index -> aquali;
+        assertEquals(aquali,iPokemonMetadataProvider.getPokemonMetadata(133));
     }
 
     @Test
-    void getAqualiMetadata() throws PokedexException{
-        assertEquals(aquali,iAqualiMetadataProvider.getPokemonMetadata(133));
+    void getIndexBulbizarre() throws PokedexException {
+        iPokemonMetadataProvider = index -> bulbizarre;
+        assertEquals(0,iPokemonMetadataProvider.getPokemonMetadata(0).getIndex());
     }
 
+    @Test
+    void getIndexAquali() throws PokedexException {
+        iPokemonMetadataProvider = index -> aquali;
+        assertEquals(133,iPokemonMetadataProvider.getPokemonMetadata(133).getIndex());
+    }
 }
