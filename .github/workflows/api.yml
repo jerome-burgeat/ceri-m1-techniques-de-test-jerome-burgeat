@@ -20,6 +20,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 18.0.1
+      - name: coverage
+        run: mvn -B clean package -DskipTests
       - name: Run tests and collect coverage
         run: mvn -B test
       - name: Upload coverage to Codecov
