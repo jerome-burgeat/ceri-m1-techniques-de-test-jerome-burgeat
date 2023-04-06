@@ -4,6 +4,7 @@
 ### Coverage
 
 * Jérôme Burgeat
+* M1 ILSEN-alt-G1
 * [![CircleCI](https://circleci.com/gh/jerome-burgeat/ceri-m1-techniques-de-test-jerome-burgeat.svg?style=svg)](https://circleci.com/gh/jerome-burgeat/ceri-m1-techniques-de-test-jerome-burgeat)
 * [![codecov](https://codecov.io/gh/jerome-burgeat/ceri-m1-techniques-de-test-jerome-burgeat/branch/master/graph/badge.svg)](https://codecov.io/gh/jerome-burgeat/ceri-m1-techniques-de-test-jerome-burgeat)
 
