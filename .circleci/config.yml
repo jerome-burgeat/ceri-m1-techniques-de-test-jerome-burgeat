@@ -32,9 +32,5 @@ jobs:
       - run: mvn dependency:go-offline
       # Exécute les tests unitaires
       - run: mvn clean test
-      - codecov/upload:
-          file: ./target/site/jacoco/jacoco.xml
-          flags: unittests
-          token: 1b514fa8-56b2-4830-94de-c79acc4e85a2
 
 
