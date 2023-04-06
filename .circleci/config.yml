@@ -2,7 +2,7 @@
 version: 2.1
 
 orbs:
-  codecov: codecov/codecov@3.2.2
+  codecov: codecov/codecov@3.2.4
   node: circleci/node@4.7.0
 
 # Définit les workflows qui seront exécutés dans CircleCI
@@ -16,11 +16,32 @@ workflows:
           filters:
             branches:
               only: master
-  upload-to-codecov:
-    jobs:
-      - node/test:
-          post-steps:
+  basic_upload:
+    description: |
+      Upload coverage with Codecov Create a simple flow to upload coverage reports to Codecov
+    usage:
+      version: "2.1"
+      orbs:
+        codecov: codecov/codecov@3.2.4
+      workflows:
+        upload-to-codecov:
+          jobs:
+            - checkout
             - codecov/upload
+    node_test_upload:
+      description: |
+        Upload coverage with Codecov Create a simple flow to upload coverage reports to Codecov and use CircleCI's node/test job
+      usage:
+        version: "2.1"
+        orbs:
+          codecov: codecov/codecov@3.2.4
+          node: circleci/node@4.7.0
+        workflows:
+          upload-to-codecov:
+            jobs:
+              - node/test:
+                  post-steps:
+                    - codecov/upload
 
 # Définit les jobs qui seront exécutés dans le workflow
 jobs:
