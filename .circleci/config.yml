@@ -33,6 +33,7 @@ jobs:
       - run: mvn clean test
       - codecov/upload
       - run: mvn checkstyle:check
+      - run: mvn checkstyle:checkstyle-aggregate
 
 
 
