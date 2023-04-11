@@ -86,7 +86,7 @@
                             <failsOnError>true</failsOnError>
                         </configuration>
                         <goals>
-                            <goal>checkstyle/</goal>
+                            <goal>checkstyle</goal>
                         </goals>
                     </execution>
                 </executions>
