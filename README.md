@@ -7,7 +7,7 @@
 * M1 ILSEN-alt-G1
 * [![CircleCI](https://circleci.com/gh/jerome-burgeat/ceri-m1-techniques-de-test-jerome-burgeat.svg?style=svg)](https://circleci.com/gh/jerome-burgeat/ceri-m1-techniques-de-test-jerome-burgeat)
 * [![codecov](https://codecov.io/gh/jerome-burgeat/ceri-m1-techniques-de-test-jerome-burgeat/branch/master/graph/badge.svg)](https://codecov.io/gh/jerome-burgeat/ceri-m1-techniques-de-test-jerome-burgeat)
-*  [![Checkstyle](https://img.shields.io/badge/Checkstyle-Passing-brightgreen)](file:///D:/CoursAmphi/MASTER/S2/Techniques%20de%20test/ceri-m1-techniques-de-test-jerome-burgeat/target/checkstyle-result.xml)
+*  [![Checkstyle](https://img.shields.io/badge/Checkstyle-Passing-brightgreen)](https://github.com/jerome-burgeat/ceri-m1-techniques-de-test-jerome-burgeat/checkstyle.html)
 
 ## Introduction
 
