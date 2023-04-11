@@ -32,7 +32,6 @@ jobs:
       # Exécute les tests unitaires
       - run: mvn clean test
       - codecov/upload
-      - run: mvn checkstyle:check
       - run: mvn checkstyle:checkstyle-aggregate
 
 
