@@ -33,7 +33,9 @@ jobs:
       - run: mvn clean test
       - codecov/upload
       - run: mvn checkstyle:checkstyle-aggregate
-      - run: sudo apt-get update && sudo apt-get install openjdk-18-jdk
+      - run:
+         command: | 
+          sudo apt-get update && sudo apt-get install openjdk-18-jdk
       - run: javadoc -d .\javadocs\ .\src\main\java\fr\univavignon\pokedex\api\*.java
 
 
