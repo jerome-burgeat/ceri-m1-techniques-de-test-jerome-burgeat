@@ -33,6 +33,7 @@ jobs:
       - run: mvn clean test
       - codecov/upload
       - run: mvn checkstyle:checkstyle-aggregate
+      - run: javadoc -d .\javadocs\ .\src\main\java\fr\univavignon\pokedex\api\*.java
 
 
 
