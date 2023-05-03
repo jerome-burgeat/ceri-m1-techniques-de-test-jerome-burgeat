@@ -52,6 +52,11 @@ jobs:
           name: OpenJDK-Install
           command: sudo apt-get install openjdk-11-jdk-headless -y
       - run:
+          name: Install dependencies
+          command: |
+            sudo apt-get update && sudo apt-get install -y maven
+            mvn dependency:get -Dartifact=org.apache.commons:commons-collections4:4.4
+      - run:
           name: Docs-Build
           command: javadoc -d ./docs ./src/main/java/fr/univavignon/pokedex/api/*.java
       - persist_to_workspace:
