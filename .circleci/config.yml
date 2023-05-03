@@ -36,5 +36,7 @@ jobs:
       #- run:
       #   command: |
       #    sudo apt-get update && sudo apt-get install openjdk-18-jdk
-      - command : javadoc -d .\javadocs\ .\src\main\java\fr\univavignon\pokedex\api\*.java
+      - run:
+        - name: Javadoc
+        - command : javadoc -d .\javadocs\ .\src\main\java\fr\univavignon\pokedex\api\*.java
   push_javadocs:
