@@ -11,7 +11,7 @@ public class Pokedex implements IPokedex {
     private IPokemonFactory pokemonFactory;
 
     public Pokedex(IPokemonMetadataProvider metadataProvider, IPokemonFactory pokemonFactory) {
-        this.pokemonList = new ArrayList<>();
+        this.pokemonList = new ArrayList<Pokemon>();
         this.metadataProvider = metadataProvider;
         this.pokemonFactory = pokemonFactory;
     }
