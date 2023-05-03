@@ -37,7 +37,6 @@ jobs:
       - run: mvn clean test
       - codecov/upload
       - run: mvn checkstyle:checkstyle-aggregate
-
   javadoc:
     docker:
       - image: cimg/base:2021.04
@@ -58,7 +57,6 @@ jobs:
       - persist_to_workspace:
           root: .
           paths: javadocs
-
   push_javadocs:
     docker:
       - image: node:20
