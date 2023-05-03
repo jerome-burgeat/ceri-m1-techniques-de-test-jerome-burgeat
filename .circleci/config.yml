@@ -54,8 +54,6 @@ jobs:
       - run:
           name: Docs-Build
           command: |
-            sudo apt-get update && sudo apt-get install -y maven
-            mvn dependency:get -Dartifact=org.apache.commons:commons-collections4:4.0
             javadoc -d ./docs ./src/main/java/fr/univavignon/pokedex/api/*.java
       - persist_to_workspace:
           root: .
