@@ -23,12 +23,12 @@ class IPokemonFactoryTest {
 
 
     @Test
-    void getCreateBulbizarre() {
+    void getCreateBulbizarre() throws PokedexException {
         assertEquals(bulbizarre, iBulbizarreFactory.createPokemon(0,613, 64, 4000, 4));
     }
 
     @Test
-    void getCreateAquali() {
+    void getCreateAquali() throws PokedexException {
         assertEquals(aquali, iAqualieFactory.createPokemon(133, 2729,202,5000, 4));
     }
 
