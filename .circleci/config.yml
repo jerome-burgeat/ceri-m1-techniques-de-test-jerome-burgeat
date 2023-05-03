@@ -15,10 +15,10 @@ workflows:
           filters:
             branches:
               only: master
-      - javadoc
+      - javadocs
       - push_javadocs:
           requires:
-            - javadoc
+            - javadocs
 
 # Définit les jobs qui seront exécutés dans le workflow
 jobs:
@@ -37,7 +37,7 @@ jobs:
       - run: mvn clean test
       - codecov/upload
       - run: mvn checkstyle:checkstyle-aggregate
-  javadoc:
+  javadocs:
     docker:
       - image: cimg/base:2021.04
     steps:
