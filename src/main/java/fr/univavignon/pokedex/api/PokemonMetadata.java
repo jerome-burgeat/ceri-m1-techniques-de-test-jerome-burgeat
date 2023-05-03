@@ -5,7 +5,7 @@ package fr.univavignon.pokedex.api;
  * 
  * @author fv
  */
-public class PokemonMetadata {
+public class PokemonMetadata implements IPokemonMetadataProvider {
 
 	/** Pokemon index. **/
 	private final int index;
@@ -64,4 +64,12 @@ public class PokemonMetadata {
 		return stamina;
 	}
 
+	@Override
+	public PokemonMetadata getPokemonMetadata(int index) throws PokedexException {
+		if(this.getIndex() > 0 && this.getName() != null && this.getAttack() > 0 &&
+				this.getDefense() > 0 && this.getStamina() > 0) {
+			return this;
+		}
+		return null;
+	}
 }
