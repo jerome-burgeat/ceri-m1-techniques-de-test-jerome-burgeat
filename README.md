@@ -9,6 +9,7 @@
 * [![codecov](https://codecov.io/gh/jerome-burgeat/ceri-m1-techniques-de-test-jerome-burgeat/branch/master/graph/badge.svg)](https://codecov.io/gh/jerome-burgeat/ceri-m1-techniques-de-test-jerome-burgeat)
 * [![Checkstyle](docs/badges/checkstyle-result.svg)](https://htmlpreview.github.io?https://github.com/jerome-burgeat/ceri-m1-techniques-de-test-jerome-burgeat/blob/master/checkStyle/checkstyle.html)
 
+
 ## Introduction
 
 Vous allez à travers ces projet mettre en application une partie des aspects évoqués en cours vis à vis des techniques de tests.  
