@@ -74,5 +74,5 @@ jobs:
           fingerprints:
             - "1e:3d:9e:0f:09:cd:0f:1b:8e:87:f4:9c:28:dd:71:78"
       - run:
-        name: Deploy docs to gh-pages branch
+        name: Deploy javadocs
         command: gh-pages --dist javadocs/
