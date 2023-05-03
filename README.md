@@ -7,7 +7,7 @@
 * M1 ILSEN-alt-G1
 * [![CircleCI](https://circleci.com/gh/jerome-burgeat/ceri-m1-techniques-de-test-jerome-burgeat.svg?style=svg)](https://circleci.com/gh/jerome-burgeat/ceri-m1-techniques-de-test-jerome-burgeat)
 * [![codecov](https://codecov.io/gh/jerome-burgeat/ceri-m1-techniques-de-test-jerome-burgeat/branch/master/graph/badge.svg)](https://codecov.io/gh/jerome-burgeat/ceri-m1-techniques-de-test-jerome-burgeat)
-* [![Checkstyle](docs/badges/checkstyle-result.svg)](https://htmlpreview.github.io?https://github.com/jerome-burgeat/ceri-m1-techniques-de-test-jerome-burgeat/blob/master/checkStyle/checkstyle.html)
+* [![Checkstyle](docs/badges/checkstyle-result.svg)](https://jerome-burgeat.github.io/ceri-m1-techniques-de-test-jerome-burgeat/fr/univavignon/pokedex/api/package-summary.html)
 
 
 ## Introduction
