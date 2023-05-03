@@ -15,10 +15,10 @@ workflows:
           filters:
             branches:
               only: master
-      - javadocs
+      - javadoc
       - push_javadocs:
           requires:
-            - javadocs
+            - javadoc
 
 # Définit les jobs qui seront exécutés dans le workflow
 jobs:
