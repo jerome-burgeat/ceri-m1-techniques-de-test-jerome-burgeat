@@ -48,7 +48,7 @@ class IPokedexTest {
 
     @Test
     void getMetadata() throws PokedexException {
-        assertEquals(Pokemon.class,iPokedex.getPokemon(bulbizarre.getIndex()).getPokemonMetadata(bulbizarre.getIndex()).getClass());
+        assertEquals(PokemonMetadata.class, iPokedex.getPokemonMetadata(bulbizarre.getIndex()).getClass());
     }
 
     @Test
