@@ -9,7 +9,9 @@ import fr.univavignon.pokedex.api.IPokemonFactory;
 import fr.univavignon.pokedex.api.Pokemon;
 
 public class RocketPokemonFactory implements IPokemonFactory {
-	
+
+	public RocketPokemonFactory() {}
+
 	private static Map<Integer, String> index2name;
 	static {
 		Map<Integer, String> aMap = new HashMap<Integer, String>();
@@ -32,10 +34,12 @@ public class RocketPokemonFactory implements IPokemonFactory {
 	}
 
 	@Override
-	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) {
+	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) throws PokedexException {
 		String name;
 		if(!index2name.containsKey(index)) {
 			name = index2name.get(0);
+			if (index < 0 || index > 150 )
+				throw new PokedexException("Le pokemon est introuvable");
 		} else {
 			name = index2name.get(index);
 		}
