@@ -38,8 +38,6 @@ public class RocketPokemonFactory implements IPokemonFactory {
 		String name;
 		if(!index2name.containsKey(index)) {
 			name = index2name.get(0);
-			if (index < 0 || index > 150 )
-				throw new PokedexException("Le pokemon est introuvable");
 		} else {
 			name = index2name.get(index);
 		}
