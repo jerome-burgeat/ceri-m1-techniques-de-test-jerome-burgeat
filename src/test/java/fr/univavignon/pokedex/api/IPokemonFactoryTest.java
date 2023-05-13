@@ -132,6 +132,16 @@ class IPokemonFactoryTest {
     }
 
     @Test
+    void getIvBulbizarreMetadata() throws PokedexException{
+        assertEquals(Double.class,((Double) iPokemonFactory.createPokemon(0,613, 64, 4000, 4).getIv()).getClass());
+    }
+
+    @Test
+    void getIvAqualiMetadata() throws PokedexException{
+        assertEquals(Double.class,((Double) iPokemonFactory.createPokemon(133, 2729,202,5000, 4).getIv()).getClass());
+    }
+
+    @Test
     void getPokedexException() {
         for(int i=-10; i <= -1; i++) {
             int negatif = i;
