@@ -30,7 +30,22 @@ class IPokemonTrainerFactoryTest {
     }
 
     @Test
-    void getTrainerInstinct() {
-        assertEquals(trainer,iPokemonTrainerFactory.createTrainer("Sacha", Team.INSTINCT, iPokedexFactory));
+    void getTrainer() {
+        assertEquals(PokemonTrainer.class,iPokemonTrainerFactory.createTrainer("Sacha", Team.INSTINCT, iPokedexFactory).getClass());
+    }
+
+    @Test
+    void getTrainerName() {
+        assertEquals(trainer.getName(),iPokemonTrainerFactory.createTrainer("Sacha", Team.INSTINCT, iPokedexFactory).getName());
+    }
+
+    @Test
+    void getTrainerTeam() {
+        assertEquals(trainer.getTeam(),iPokemonTrainerFactory.createTrainer("Sacha", Team.INSTINCT, iPokedexFactory).getTeam());
+    }
+
+    @Test
+    void getPokedexTeam() {
+        assertEquals(trainer.getPokedex(),iPokemonTrainerFactory.createTrainer("Sacha", Team.INSTINCT, iPokedexFactory).getPokedex());
     }
 }
