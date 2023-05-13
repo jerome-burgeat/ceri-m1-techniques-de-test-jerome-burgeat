@@ -23,6 +23,15 @@ class IPokemonFactoryTest {
     }
 
     @Test
+    void createBulbizarre() throws PokedexException {
+        assertEquals(bulbizarre.getClass(),iPokemonFactory.createPokemon(0,613, 64, 4000, 4).getClass());
+    }
+
+    /*@Test
+    void createAqualiMetadata() throws PokedexException {
+        assertEquals(aquali.getPokemonMetadata(aquali.getIndex()),iPokemonFactory.createPokemon(133, 2729,202,5000, 4).getPokemonMetadata(aquali.getIndex()));
+    }*/
+    @Test
     void getBulbizarreMetadata() throws PokedexException {
         assertEquals(bulbizarre.getPokemonMetadata(bulbizarre.getIndex()),iPokemonFactory.createPokemon(0,613, 64, 4000, 4).getPokemonMetadata(bulbizarre.getIndex()));
     }
