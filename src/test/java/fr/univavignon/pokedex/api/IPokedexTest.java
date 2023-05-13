@@ -160,9 +160,10 @@ class IPokedexTest {
     @Test
     void getPokemonComparator() throws PokedexException {
         Comparator<Pokemon> order = (o1, o2) -> 0;
-
-        assertEquals(pokemons.get(0).getPokemonMetadata(bulbizarre.getIndex()), iPokedex.getPokemons(order).get(0).getPokemonMetadata(bulbizarre.getIndex()));
-        assertEquals(pokemons.get(1).getPokemonMetadata(aquali.getIndex()), iPokedex.getPokemons(order).get(1).getPokemonMetadata(aquali.getIndex()));
+        assertEquals(iPokedex.getPokemons(order),pokemons);
+        assertEquals(iPokedex.getPokemons(PokemonComparators.INDEX).get(0).getIndex(),0);
+        assertEquals(iPokedex.getPokemons(PokemonComparators.NAME).get(0).getName(),"Aquali");
+        assertEquals(iPokedex.getPokemons(PokemonComparators.CP).get(0).getCp(),613);
     }
 
     @Test
