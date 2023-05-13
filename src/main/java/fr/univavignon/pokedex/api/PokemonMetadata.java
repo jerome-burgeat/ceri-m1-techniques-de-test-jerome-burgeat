@@ -66,10 +66,6 @@ public class PokemonMetadata implements IPokemonMetadataProvider {
 
 	@Override
 	public PokemonMetadata getPokemonMetadata(int index) throws PokedexException {
-		if(this.getIndex() >= 0 && this.getName() != null && this.getAttack() > 0 &&
-				this.getDefense() > 0 && this.getStamina() > 0) {
-			return this;
-		}
-		return null;
+		return this;
 	}
 }
