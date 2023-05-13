@@ -20,7 +20,7 @@ class IPokedexFactoryTest {
 
         iPokemonMetadataProvider = new PokemonMetadataProvider();
         iPokemonFactory = new PokemonFactory(iPokemonMetadataProvider);
-        iPokedexFactory = new  PokedexFactory();
+        iPokedexFactory = new PokedexFactory();
     }
 
     @Test
