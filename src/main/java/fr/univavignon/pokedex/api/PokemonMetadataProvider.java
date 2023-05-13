@@ -5,12 +5,12 @@ import java.util.List;
 
 public class PokemonMetadataProvider implements IPokemonMetadataProvider {
 
-    private static List<PokemonMetadata> pokemonMetadataList;
+    private static PokemonMetadata[] pokemonMetadataList;
 
     public PokemonMetadataProvider() {
-        pokemonMetadataList = new ArrayList<>();
-        pokemonMetadataList.add(0, new PokemonMetadata(0, "Bulbizarre", 126, 126, 90));
-        //pokemonMetadataList.add(133, new PokemonMetadata(133, "Aquali", 186, 168, 260));
+        pokemonMetadataList = new PokemonMetadata[150];
+        pokemonMetadataList[0] = new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);
+        pokemonMetadataList[133] = new PokemonMetadata(133, "Aquali", 186, 168, 260);
     }
 
     @Override
@@ -18,7 +18,7 @@ public class PokemonMetadataProvider implements IPokemonMetadataProvider {
         if (index < 0 || index > 151)
             throw new PokedexException("Le pokemon est introuvable");
         try {
-            return pokemonMetadataList.get(index);
+            return pokemonMetadataList[index];
         } catch (Exception e) {
             throw new PokedexException("Le pokemon est introuvable");
         }
