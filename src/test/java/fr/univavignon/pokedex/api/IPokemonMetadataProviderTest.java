@@ -19,6 +19,16 @@ class IPokemonMetadataProviderTest {
     }
 
     @Test
+    void getBulbizarreMetadata() throws PokedexException {
+        assertEquals(bulbizarre.getPokemonMetadata(bulbizarre.getIndex()),iPokemonMetadataProvider.getPokemonMetadata(bulbizarre.getIndex()).getPokemonMetadata(bulbizarre.getIndex()));
+    }
+
+    /*@Test
+    void getBulbizarreMetadata() throws PokedexException {
+        assertEquals(aquali.getPokemonMetadata(aquali.getIndex()),iPokemonMetadataProvider.getPokemonMetadata(aquali.getIndex()).getPokemonMetadata(aquali.getIndex()));
+    }*/
+
+    @Test
     void getIndexBulbizarre() throws PokedexException {
         assertEquals(bulbizarre.getIndex(),iPokemonMetadataProvider.getPokemonMetadata(bulbizarre.getIndex()).getIndex());
     }
