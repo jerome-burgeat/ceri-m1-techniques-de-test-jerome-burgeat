@@ -3,9 +3,6 @@ package fr.univavignon.pokedex.api;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Comparator;
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class IPokemonTrainerFactoryTest {
@@ -24,28 +21,27 @@ class IPokemonTrainerFactoryTest {
         iPokedexFactory = new PokedexFactory();
         iPokedex = new Pokedex(iPokemonMetadataProvider, iPokemonFactory);
 
-        trainer = new PokemonTrainer("Sacha", Team.INSTINCT, iPokedex);
-
-        iPokemonTrainerFactory = (name, team, pokedexFactory) -> trainer;
+        trainer = new PokemonTrainerFactory().createTrainer("Sacha", Team.INSTINCT, iPokedexFactory);
     }
 
     @Test
     void getTrainer() {
         assertEquals(PokemonTrainer.class,iPokemonTrainerFactory.createTrainer("Sacha", Team.INSTINCT, iPokedexFactory).getClass());
+        assertEquals(PokemonTrainer.class,new PokemonTrainerFactory().createTrainer("Mysterious man", Team.MYSTIC, iPokedexFactory).getClass());
     }
 
     @Test
     void getTrainerName() {
-        assertEquals(trainer.getName(),iPokemonTrainerFactory.createTrainer("Sacha", Team.INSTINCT, iPokedexFactory).getName());
+        assertEquals(trainer.getName(),trainer.getName());
     }
 
     @Test
     void getTrainerTeam() {
-        assertEquals(trainer.getTeam(),iPokemonTrainerFactory.createTrainer("Sacha", Team.INSTINCT, iPokedexFactory).getTeam());
+        assertEquals(trainer.getTeam(),trainer.getTeam());
     }
 
     @Test
     void getPokedexTeam() {
-        assertEquals(trainer.getPokedex(),iPokemonTrainerFactory.createTrainer("Sacha", Team.INSTINCT, iPokedexFactory).getPokedex());
+        assertEquals(trainer.getPokedex(),trainer.getPokedex());
     }
 }

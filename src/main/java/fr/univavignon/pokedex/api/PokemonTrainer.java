@@ -5,7 +5,7 @@ package fr.univavignon.pokedex.api;
  * 
  * @author fv
  */
-public class PokemonTrainer implements IPokemonTrainerFactory {
+public class PokemonTrainer {
 
 	/** Trainer name. **/
 	private final String name;
@@ -42,11 +42,5 @@ public class PokemonTrainer implements IPokemonTrainerFactory {
 	/** Pokedex getter. **/
 	public IPokedex getPokedex() {
 		return pokedex;
-	}
-
-	@Override
-	public PokemonTrainer createTrainer(String name, Team team, IPokedexFactory pokedexFactory) {
-		PokemonMetadataProvider pokemonMetadataProvider = new PokemonMetadataProvider();
-		return new PokemonTrainer(name, team, pokedexFactory.createPokedex(pokemonMetadataProvider, new PokemonFactory(pokemonMetadataProvider)));
 	}
 }
