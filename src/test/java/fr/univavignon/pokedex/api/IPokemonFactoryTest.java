@@ -28,7 +28,7 @@ class IPokemonFactoryTest {
     }
 
     /*@Test
-    void getBulbizarreMetadata() throws PokedexException {
+    void getAqualiMetadata() throws PokedexException {
         assertEquals(aquali.getPokemonMetadata(aquali.getIndex()),iPokemonFactory.createPokemon(133, 2729,202,5000, 4).getPokemonMetadata(aquali.getIndex()));
     }*/
 
