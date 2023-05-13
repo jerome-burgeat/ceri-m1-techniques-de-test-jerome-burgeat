@@ -5,7 +5,7 @@ package fr.univavignon.pokedex.api;
  * 
  * @author fv
  */
-public final class Pokemon extends PokemonMetadata implements IPokemonFactory {
+public final class Pokemon extends PokemonMetadata {
 
 	/** Combat Point of the pokemon. **/
 	private final int cp;
@@ -78,14 +78,5 @@ public final class Pokemon extends PokemonMetadata implements IPokemonFactory {
 	/** IV getter. **/
 	public double getIv() {
 		return iv;
-	}
-
-	@Override
-	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) throws PokedexException {
-		if(this.getPokemonMetadata(index) != null && this.getIndex() > 0 && this.getCp() > 0 && this.getHp() > 0
-			&& this.getDust() > 0 && this.getCandy() > 0 && this.getIv() >= 0) {
-			return this;
-		}
-		return null;
 	}
 }
