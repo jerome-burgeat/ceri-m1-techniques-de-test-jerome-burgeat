@@ -46,9 +46,7 @@ public class PokemonTrainer implements IPokemonTrainerFactory {
 
 	@Override
 	public PokemonTrainer createTrainer(String name, Team team, IPokedexFactory pokedexFactory) {
-		if(this.getName() != null && this.getTeam() != null || this.getPokedex() != null) {
-			return this;
-		}
-		return null;
+		PokemonMetadataProvider pokemonMetadataProvider = new PokemonMetadataProvider();
+		return new PokemonTrainer(name, team, pokedexFactory.createPokedex(pokemonMetadataProvider, new PokemonFactory(pokemonMetadataProvider)));
 	}
 }
