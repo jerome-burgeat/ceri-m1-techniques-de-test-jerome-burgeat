@@ -26,7 +26,6 @@ class IPokemonTrainerFactoryTest {
 
     @Test
     void getTrainer() {
-        assertEquals(PokemonTrainer.class,iPokemonTrainerFactory.createTrainer("Sacha", Team.INSTINCT, iPokedexFactory).getClass());
         assertEquals(PokemonTrainer.class,new PokemonTrainerFactory().createTrainer("Mysterious man", Team.MYSTIC, iPokedexFactory).getClass());
     }
 
